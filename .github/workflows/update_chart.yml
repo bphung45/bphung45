@@ -24,7 +24,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install yfinance matplotlib numpy pytz
+        run: pip install -r requirements.txt
 
       - name: Generate chart
         run: python generate_chart.py

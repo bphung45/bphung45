@@ -5,6 +5,6 @@ Outside of tech, I enjoy playing StarCraft II, working out, bowling, playing wit
 
 How's the market doing? (~5-10 min delay)
 
-![S&P 500 Chart](assets/sp500.png)
+![S&P 500 Chart](assets/sp500.png?raw=true)
 
 
