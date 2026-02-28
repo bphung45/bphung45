@@ -1,26 +1,25 @@
-# Runs every hour on weekdays during market hours (ET = UTC-5).
-# Also runs at weekend close so the chart stays current by Monday.
-# Can be triggered manually via workflow_dispatch.
-
+# Runs every 5mins on weekdays during market hours (ET = UTC-5).
 name: Update S&P 500 Chart
 
 on:
   schedule:
-    # Every hour Mon–Fri between 9am–5pm ET (14:00–22:00 UTC)
-    - cron: "0 14-22 * * 1-5"
-    # Saturday morning cleanup run
-    - cron: "0 10 * * 6"
-  workflow_dispatch:   # allow manual trigger from Actions tab
+    - cron: "*/5 13-20 * * 1-5"  # every 5 min, Mon–Fri, 9:30–4pm ET (13:30–20:00 UTC)
+  workflow_dispatch:
 
 jobs:
   update-chart:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # needed to push the updated image back
+      contents: write
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+
+      - name: Debug — confirm working directory and files
+        run: |
+          echo "Working directory: $(pwd)"
+          ls -la
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -46,6 +45,5 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add assets/sp500.png
-          # Only commit if the image actually changed
           git diff --cached --quiet || git commit -m "chore: update S&P 500 chart [skip ci]"
           git push
