@@ -64,7 +64,7 @@ SUBTEXT  = "#8B949E"
 OOH_FILL = "#FFFFFF"  # out-of-hours shading colour
 
 # ── Figure ────────────────────────────────────────────────────────────────────
-fig, ax = plt.subplots(figsize=(14, 5), facecolor=BG)
+fig, ax = plt.subplots(figsize=(10, 8), facecolor=BG)
 ax.set_facecolor(BG)
 
 # ── Out-of-hours shading ──────────────────────────────────────────────────────
