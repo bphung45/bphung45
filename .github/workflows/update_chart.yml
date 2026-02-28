@@ -1,4 +1,4 @@
-# Runs every 5mins on weekdays during market hours (ET = UTC-5).
+# Runs every 5mins on weekdays during market hours (ET = UTC-5). 
 name: Update S&P 500 Chart
 
 on:
