@@ -157,17 +157,17 @@ plt.setp(ax.get_xticklabels(), rotation=0, ha="center")
 today_str = datetime.now(ET).strftime("%b %d, %Y")
 
 fig.text(0.02, 0.93, f"S&P 500  ·  ^GSPC  ·  {today_str}",
-         color=TEXT, fontsize=11, fontweight="bold",
+         color=TEXT, fontsize=20, fontweight="bold",
          fontfamily="monospace", transform=fig.transFigure)
 
-fig.text(0.02, 0.80,
+fig.text(0.02, 0.90,
          f"{latest:,.2f}   {arrow} {abs(change):.2f}  ({abs(pct_change):.2f}%)",
-         color=accent, fontsize=9, fontfamily="monospace",
+         color=accent, fontsize=12, fontfamily="monospace",
          transform=fig.transFigure)
 
-fig.text(0.02, 0.68,
+fig.text(0.02, 0.87,
          f"open {open_price:,.2f}   ·   low {day_low:,.0f}   ·   high {day_high:,.0f}",
-         color=SUBTEXT, fontsize=7.5, fontfamily="monospace",
+         color=SUBTEXT, fontsize=10, fontfamily="monospace",
          transform=fig.transFigure)
 
 # Timestamp bottom-right
@@ -177,8 +177,8 @@ fig.text(0.98, 0.02, ts, color=SUBTEXT, fontsize=6.5,
 
 # ── Save ──────────────────────────────────────────────────────────────────────
 os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
-plt.tight_layout(rect=[0, 0, 1, 0.65])
-plt.savefig(OUTPUT_PATH, dpi=150, bbox_inches="tight",
+plt.tight_layout(rect=[0, 0, 1, 0.85])
+plt.savefig(OUTPUT_PATH, dpi=200, bbox_inches="tight",
             facecolor=BG, edgecolor="none")
 plt.close()
 
