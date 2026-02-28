@@ -1,16 +1,20 @@
-## Hi there 👋
+# Hi there, I'm Ben 👋
+<div align="center">
 
-<!--
-**bphung45/bphung45** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/bphung45/)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:bphung45@gmail.com)
 
-Here are some ideas to get you started:
+</div>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+I'm a software engineer who enjoys turning complex business requirements into clean, testable backend logic.
+
+Outside of tech, I enjoy playing StarCraft II, working out, bowling, playing with my two cats, and following finanical markets.
+
+---
+
+## S&P 500
+How did the market do today?
+
+![S&P 500 Chart](assets/sp500.png)
+
+
